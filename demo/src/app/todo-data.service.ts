@@ -5,10 +5,10 @@ import { Todo } from './todo';
 export class TodoDataService {
 
   // Placeholder for last id so we can simulate
-  // automatic incrementing of ids
+  // automatic incrementing of id's
   lastId: number = 0;
 
-  // Placeholder for todos
+  // Placeholder for todo's
   todos: Todo[] = [];
 
   constructor() {
