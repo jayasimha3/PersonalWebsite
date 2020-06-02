@@ -1,11 +1,8 @@
 # Changelog
 
-- completed about page (no routing - just info)
-
-## Plans for 0.4:
-
-- compile and complete info for work experience
+- completed design and information across all components
 
 ## Future Plans:
-- 0.5: finish projects section
-- 0.6: Complete routing across all pages/components
+- 0.5: complete routing
+- 0.6: complete contact form
+- 0.7: bugfixes and finishing touches

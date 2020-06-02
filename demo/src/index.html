@@ -35,10 +35,11 @@
             Projects
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
+            <a class="dropdown-item" href="/projects">Website</a>
+            <a class="dropdown-item" href="/projects">Kitchen Assistant</a>
+            <a class="dropdown-item" href="/projects">AI College Football Rankings</a>
+              <div class="dropdown-divider nav-link"></div>
+              <a class="dropdown-item" href="/projects">More Projects</a>
               </div>
         </li>
         <li class="nav-item">
@@ -85,8 +86,17 @@
       </div>
     </div>
   </div>
-  
+
   <body>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>Success!</strong> Your information has been submitted. Look for a response within 2 business days.
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button> <!-- Show when contact info has been submitted! -->
+    </div>
+    <a class="navbar-brand float-right sticky-top" href="#">
+      <img src="/icons/moon.svg" alt="" width="20" height="20" title="Dark Mode"> <!-- <img src="/icons/sun.svg" alt="" width="20" height="20" title="Light Mode"> -->
+    </a> <!-- Is not sticky! -->
     <app-root></app-root>
   </body>
 
@@ -110,7 +120,7 @@
       </ul>
         <span class="navbar-text">
           Rishee Jayasimha | 
-          <a href="https://github.com/jayasimha3/PersonalWebsite/releases">Version 0.4</a>
+          <a class="text-monospace text-muted" href="https://github.com/jayasimha3/PersonalWebsite/releases">Version 0.4</a>
         </span>
     </div>
   </nav>
