@@ -1,10 +1,14 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <title>Website</title>
+  <title>Rishee Jayasimha's Website</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal Website/Portfolio for Rishee Jayasimha">
+  <meta name="author" content="Rishee Jayasimha">
+  <title>Rishee Jayasimha</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
   <!-- Required meta tags -->
@@ -14,9 +18,8 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-
   <!-- Header -- Navbar -->
-  <nav class="navbar sticky-top navbar-light navbar-expand-lg" style="background-color: #E62600;">
+  <nav class="navbar sticky-top navbar-dark bg-dark navbar-expand-lg">
     <a class="navbar-brand" href="#">RISHEE JAYASIMHA</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -25,7 +28,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="">About<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/about">About<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/work-experience">Work Experience</a>
@@ -35,9 +38,9 @@
             Projects
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/projects">Website</a>
-            <a class="dropdown-item" href="/projects">Kitchen Assistant</a>
-            <a class="dropdown-item" href="/projects">AI College Football Rankings</a>
+            <a class="dropdown-item" href="/projects#Website">Website</a>
+            <a class="dropdown-item" href="/projects#CapstoneProject">Kitchen Assistant</a>
+            <a class="dropdown-item" href="/projects#MLProject">AI College Football Rankings</a>
               <div class="dropdown-divider nav-link"></div>
               <a class="dropdown-item" href="/projects">More Projects</a>
               </div>
@@ -69,15 +72,19 @@
                 I will respond through email within 2 business days, and will attach my resume if requested. If you would like an alternate means of contacting me,
                 please take a look at my <a class="font-weight-bold" href="https://www.linkedin.com/in/jayasimha3/">LinkedIn Profile</a> or my 
                 <a class="font-weight-bold" href="https://osu.joinhandshake.com/users/11578467">Handshake Profile</a>.
+                <hr class="my-4">
               </h6>
-              <label for="Email">Email Address</label>
-              <input type="email" class="form-control" id="Email" aria-describedby="emailHelp">
             </div>
             <div class="form-group">
+              <label for="Name">Name (First and Last)</label>
+              <input type="name" class="form-control" id="Name" aria-describedby="nameHelp">
+              <label for="Email">Email Address</label>
+              <input type="email" class="form-control" id="Email" aria-describedby="emailHelp">
+              <hr class="my-4">
               <label for="Message">Type your message here:</label>
               <textarea class="form-control" id="Message" rows="3"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" onclick="showconfirmation()" class="btn btn-primary" data-dismiss="modal" id="submit">Submit</button>
           </form>
         </div>
         <div class="modal-footer">
@@ -87,21 +94,21 @@
     </div>
   </div>
 
-  <body>
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-      <strong>Success!</strong> Your information has been submitted. Look for a response within 2 business days.
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button> <!-- Show when contact info has been submitted! -->
-    </div>
-    <a class="navbar-brand float-right sticky-top" href="#">
-      <img src="/icons/moon.svg" alt="" width="20" height="20" title="Dark Mode"> <!-- <img src="/icons/sun.svg" alt="" width="20" height="20" title="Light Mode"> -->
-    </a> <!-- Is not sticky! -->
+  <div class="alert alert-success alert-dismissible fade show" style="display:none;" role="alert" id="confirmation_alert">
+    <strong>Success!</strong> Your information has been submitted. Look for a response within 2 business days.
+    <button type="button" onclick="hideconfirmation()" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button> <!-- Show when contact info has been submitted! -->
+  </div>
+
+  <body id="body" style="min-height: 100%;">
+    <br>
     <app-root></app-root>
+    <br>
   </body>
 
   <!-- Footer -->
-  <nav class="navbar navbar-light navbar-expand-lg" style="background-color: #E6E6FF;">
+  <footer class="navbar navbar-dark bg-dark navbar-expand-lg">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -109,7 +116,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <a class="navbar-brand" href="https://github.com/jayasimha3">
-          <img src="/icons/github_light.svg" alt="" width="32" height="32" title="Github">
+          <img src="/icons/github_dark.svg" alt="" width="32" height="32" title="Github">
         </a>
         <a class="navbar-brand" href="https://www.linkedin.com/in/jayasimha3/">
           <img src="/icons/linkedin.svg" alt="" width="32" height="32" title="LinkedIn">
@@ -118,17 +125,32 @@
           <img src="/icons/handshake.svg" alt="" width="32" height="32" title="Handshake">
         </a>
       </ul>
+      <ul class="navbar-nav mr-auto">
+        <div class="custom-control custom-switch">
+          <input type="checkbox" class="custom-control-input" id="darkSwitch" />
+          <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+        </div>
+      </ul>
         <span class="navbar-text">
           Rishee Jayasimha | 
-          <a class="text-monospace text-muted" href="https://github.com/jayasimha3/PersonalWebsite/releases">Version 0.4</a>
+          <a class="text-monospace text-muted" href="https://github.com/jayasimha3/PersonalWebsite/releases">Version 0.5</a>
         </span>
     </div>
-  </nav>
+  </footer>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script>
+    var firstLoad = localStorage.getItem("firstLoad") || true;
+    if (firstLoad === true) {
+      var dark = "dark";
+      localStorage.setItem("darkSwitch", dark);
+    }
+    firstLoad = false
+    localStorage.setItem("firstLoad", firstLoad);
+  </script>
 </body>
 </html>

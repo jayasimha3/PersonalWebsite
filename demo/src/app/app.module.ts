@@ -1,19 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, ExtraOptions, NavigationExtras } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { WorkExperienceComponent } from './work-experience/work-experience.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ExtracurricularComponent } from './extracurricular/extracurricular.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'about',
+    redirectTo: 'home',
     pathMatch: 'full'
+  },
+  {
+    path: 'about',
+    component: AboutComponent
   },
   {
     path: 'extracurricular',
@@ -29,9 +34,19 @@ const routes: Routes = [
   },
   {
     path: '',
-    component: AboutComponent
+    component: HomeComponent
   }
 ];
+
+const routerOptions: ExtraOptions = {
+  useHash: false,
+  anchorScrolling: 'enabled',
+  scrollOffset: [0, 64],
+  //onSameUrlNavigation: 'reload',
+  scrollPositionRestoration: 'enabled'
+  //relativeLinkResolution: 'corrected'
+  // ...any other options you'd like to use
+};
 
 @NgModule({
   declarations: [
@@ -39,12 +54,13 @@ const routes: Routes = [
     AboutComponent,
     WorkExperienceComponent,
     ProjectsComponent,
-    ExtracurricularComponent
+    ExtracurricularComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes, routerOptions)
   ],
   exports: [RouterModule],
   providers: [],
