@@ -34,7 +34,10 @@
             "scripts": [
               "src/scripts/dark-mode-switch.js",
               "src/scripts/dark-mode-switch.min.js",
-              "src/scripts/showconfirmation.js"
+              "src/scripts/showconfirmation.js",
+              "node_modules/jQuery/lib/node-jquery.js",
+              "src/scripts/contactform.js",
+              "src/scripts/change-active-page.js"
             ]
           },
           "configurations": {

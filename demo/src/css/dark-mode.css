@@ -59,3 +59,17 @@
 .btn .badge-light {
   background-color: #ffffff !important;
 }
+
+[data-theme="dark"] .close {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .dropdown-menu {
+  background-color: #48515a !important;
+  color: #eeeeee;
+}
+
+[data-theme="dark"] .dropdown-item {
+  background-color: #48515a !important;
+  color: #eeeeee;
+}
