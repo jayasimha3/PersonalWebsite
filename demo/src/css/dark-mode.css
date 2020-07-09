@@ -4,11 +4,11 @@
 }
 
 [data-theme="dark"] .bg-light {
-  background-color: #333 !important;
+  background-color: #343a40 !important;
 }
 
 [data-theme="dark"] .bg-white {
-  background-color: #000 !important;
+  background-color: #343a40 !important;
 }
 
 [data-theme="dark"] .bg-black {
@@ -16,7 +16,7 @@
 }
 
 [data-theme="dark"] .card {
-  background-color: #292929 !important;
+  background-color: #343a40 !important;
 }
 
 [data-theme="dark"] .border {
@@ -28,7 +28,7 @@
 }
 
 [data-theme="dark"] .jumbotron {
-  background-color: #292929 !important;
+  background-color: #343a40 !important;
 }
 
 [data-theme="dark"] .btn-light {
@@ -37,7 +37,7 @@
 }
 
 [data-theme="dark"] .card-body {
-  background-color: #292929 !important;
+  background-color: #343a40 !important;
 }
 
 [data-theme="dark"] .border-light {
@@ -53,7 +53,7 @@
 }
 
 [data-theme="dark"] .modal-content {
-  background-color: #292929 !important;
+  background-color: #343a40 !important;
 }
 
 .btn .badge-light {
