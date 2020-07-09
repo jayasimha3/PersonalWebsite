@@ -73,3 +73,13 @@
   background-color: #48515a !important;
   color: #eeeeee;
 }
+
+[data-theme="dark"] .main-card {
+  background-color: #333333 !important;
+  color: #eeeeee;
+}
+
+[data-theme="dark"] .main-card .card-body {
+  background-color: #333333 !important;
+  color: #eeeeee;
+}
