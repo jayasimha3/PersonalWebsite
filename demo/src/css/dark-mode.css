@@ -83,3 +83,9 @@
   background-color: #333333 !important;
   color: #eeeeee;
 }
+
+[data-theme="dark"] .btn-dark {
+  background-color: #48515a !important;
+  color: #eeeeee;
+  border: #48515a;
+}
