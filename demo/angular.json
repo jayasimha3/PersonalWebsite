@@ -21,8 +21,26 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              "src/icons",
+              "src/assets/battelle/batelle.png",
+              "src/assets/me/jayasimharishee.jpg",
+              "src/assets/ohiostate/blockO.png",
+              "src/assets/slu/stlouisuniv.png",
+              "src/assets/extracurricular/boardgame.svg",
+              "src/assets/extracurricular/computer.jpg",
+              "src/assets/extracurricular/lab6_maze.png",
+              "src/assets/extracurricular/ps4_die.jpg",
+              "src/assets/extracurricular/robot.svg",
+              "src/assets/extracurricular/tennisracquet.svg",
+              "src/assets/extracurricular/trumpet.svg",
+              "src/assets/projects/FinalReport_MLProject.pdf",
+              "src/assets/projects/KitchenAssistantReadme.md",
+              "src/assets/projects/KitchenAssistant.png",
+              "src/assets/projects/MLProject.png",
+              "src/assets/projects/Website.png",
+              "src/icons/github_dark.svg",
+              "src/icons/github_light.svg",
+              "src/icons/handshake.svg",
+              "src/icons/linkedin.svg",
               "src/css",
               "src/scripts"
             ],
@@ -137,8 +155,13 @@
               "devServerTarget": "website:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "website"
 }
