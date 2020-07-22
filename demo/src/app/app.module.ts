@@ -9,6 +9,8 @@ import { WorkExperienceComponent } from './work-experience/work-experience.compo
 import { ProjectsComponent } from './projects/projects.component';
 import { ExtracurricularComponent } from './extracurricular/extracurricular.component';
 import { HomeComponent } from './home/home.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
 
 const routes: Routes = [
   {
@@ -35,6 +37,11 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent
+  },
+  {
+    path: '#',
+    redirectTo: 'home',
+    pathMatch: 'full'
   }
 ];
 
@@ -55,7 +62,9 @@ const routerOptions: ExtraOptions = {
     WorkExperienceComponent,
     ProjectsComponent,
     ExtracurricularComponent,
-    HomeComponent
+    HomeComponent,
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
