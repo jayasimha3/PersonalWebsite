@@ -1,0 +1,167 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "website": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/website",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "src/favicon.ico",
+              "src/assets/battelle/batelle.png",
+              "src/assets/me/jayasimharishee.jpg",
+              "src/assets/ohiostate/blockO.png",
+              "src/assets/slu/stlouisuniv.png",
+              "src/assets/extracurricular/boardgame.svg",
+              "src/assets/extracurricular/computer.jpg",
+              "src/assets/extracurricular/lab6_maze.png",
+              "src/assets/extracurricular/ps4_die.jpg",
+              "src/assets/extracurricular/robot.svg",
+              "src/assets/extracurricular/tennisracquet.svg",
+              "src/assets/extracurricular/trumpet.svg",
+              "src/assets/projects/FinalReport_MLProject.pdf",
+              "src/assets/projects/KitchenAssistantReadme.md",
+              "src/assets/projects/KitchenAssitant.png",
+              "src/assets/projects/MLProject.png",
+              "src/assets/projects/Website.png",
+              "src/icons/github_dark.svg",
+              "src/icons/github_light.svg",
+              "src/icons/handshake.svg",
+              "src/icons/linkedin.svg",
+              "src/css",
+              "src/scripts"
+            ],
+            "styles": [
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/css/dark-mode.css"
+            ],
+            "scripts": [
+              "src/scripts/dark-mode-switch.js",
+              "src/scripts/dark-mode-switch.min.js",
+              "src/scripts/showconfirmation.js",
+              "src/scripts/contactform.js",
+              "src/scripts/change-active-page.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "website:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "website:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "website:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.spec.json",
+            "karmaConfig": "karma.conf.js",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              "src/icons",
+              "src/css",
+              "src/scripts"
+            ],
+            "styles": [
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/css/dark-mode.css"
+            ],
+            "scripts": [
+              "src/scripts/dark-mode-switch.js",
+              "src/scripts/dark-mode-switch.min.js",
+              "src/scripts/showconfirmation.js"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "tsconfig.app.json",
+              "tsconfig.spec.json",
+              "e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "e2e/protractor.conf.js",
+            "devServerTarget": "website:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "website:serve:production"
+            }
+          }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
+        }
+      }
+    }
+  },
+  "defaultProject": "website"
+}
