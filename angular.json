@@ -42,7 +42,9 @@
               "src/icons/handshake.svg",
               "src/icons/linkedin.svg",
               "src/css",
-              "src/scripts"
+              "src/scripts",
+              "src/assets/gm/gm.jpg",
+              "src/icons/indeed.svg"
             ],
             "styles": [
               "src/styles.css",
