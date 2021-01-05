@@ -1,3 +1,9 @@
+# Personal Website
+
+This project is a website I built to further my web development skills and showcase information on my resume in a website format. It is written using Google's Angular framework `version 10` and uses Bootstrap `version 4` for UI elements.
+
+##
+
 # Demo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
