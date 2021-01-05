@@ -1,4 +1,13 @@
-<app-navbar></app-navbar>
-<br>
-<router-outlet></router-outlet>
-<br>
+<div class="app-body" flex style="height: 100vh">
+    <div class="header">
+        <app-navbar class="header"></app-navbar>
+    </div>
+    <br>
+    <div class="content">
+        <router-outlet class="content"></router-outlet>
+    </div>
+    <br>
+    <div class="footer">
+        <app-footer class="footer"></app-footer>
+    </div>
+</div>
