@@ -45,7 +45,8 @@
               "src/scripts",
               "src/assets/gm/gm.jpg",
               "src/icons/indeed.svg",
-              "src/assets/logo/logo_RJ.png"
+              "src/assets/logo/logo_RJ.png",
+              "src/assets/CHANGELOG.md"
             ],
             "styles": [
               "src/styles.css",
@@ -53,11 +54,9 @@
               "src/css/dark-mode.css"
             ],
             "scripts": [
-              "src/scripts/dark-mode-switch.js",
               "src/scripts/dark-mode-switch.min.js",
               "src/scripts/showconfirmation.js",
-              "src/scripts/contactform.js",
-              "src/scripts/change-active-page.js"
+              "src/scripts/contactform.js"
             ]
           },
           "configurations": {

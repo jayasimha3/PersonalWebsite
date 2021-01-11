@@ -16,3 +16,8 @@
 - fixed home picture showing below the footer on small viewport devices
 - changed about button colors to be shades of blue rather than Christmas colors
 - changed release changlog url to point to the changlog (this file) through Github
+- made dark mode the deafult theme (instead of cheating through localStorage - needs cleaning)
+- centered navigation links to pages (about, work ecperience, projects, extracurricular)
+- broke dark mode switch - site is permanently dark mode
+- changed version release to direct to changlelog
+- (not code related) changed website repo to public visibility
